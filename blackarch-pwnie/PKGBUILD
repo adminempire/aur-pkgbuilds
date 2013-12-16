@@ -1,0 +1,36 @@
+pkgname=blackarch-pwnie
+pkgver=0.1
+groups=('blackarch' 'blackarch-drone' 'blackarch-meta-plug')
+pkgrel=1
+pkgdesc="Scripts from the pwnieexpress project ported to BlackArch use."
+arch=('armv6h' 'armv7h')
+url='https://github.com/adminempire/pwn_pad_sources/'
+license=('creative-commons')
+depends=('aircrack-ng' 'bluelog' 'ettercap' 'macchanger' 'kismet' 'metasploit' 'nmap' 'set'
+        'sslstrip' 'tcpdump' 'tshark' 'wifite')
+source=("blackarch-plug::git+https://github.com/adminempire/pwn_pad_sources.git")
+md5sums=('SKIP')
+
+package() {
+  cd ${srcdir}/blackarch-plug/scripts
+  install -d ${pkgdir}/usr/bin
+  install -Dm744 airodump.sh ${pkgdir}/usr/bin
+  install -Dm744 bluelog.sh ${pkgdir}/usr/bin
+  install -Dm744 btscan.sh ${pkgdir}/usr/bin
+  install -Dm744 dnsspoof.sh ${pkgdir}/usr/bin
+  install -Dm744 dnsiff.sh ${pkgdir}/usr/bin
+  install -Dm744 ettercap.sh ${pkgdir}/usr/bin
+  install -Dm744 evilap.sh ${pkgdir}/usr/bin
+  install -Dm744 hostmacchanger.sh ${pkgdir}/usr/bin
+  install -Dm744 kismet.sh ${pkgdir}/usr/bin
+  install -Dm744 logwiper.sh ${pkgdir}/usr/bin
+  install -Dm744 msf.sh ${pkgdir}/usr/bin
+  install -Dm744 nmap_scan.sh ${pkgdir}/usr/bin
+  install -Dm744 set.sh ${pkgdir}/usr/bin
+  install -Dm744 sslstrip.sh ${pkgdir}/usr/bin
+  install -Dm744 stringswatch.sh ${pkgdir}/usr/bin
+  install -Dm744 tcpdump.sh ${pkgdir}/usr/bin
+  install -Dm744 tshark.sh ${pkgdir}/usr/bin
+  install -Dm744 ubertooth.sh ${pkgdir}/usr/bin
+  install -Dm744 wifite.sh ${pkgdir}/usr/bin
+}
