@@ -1,0 +1,20 @@
+pkgname=blackarch-autoplug
+pkgver=0.1
+groups=('blackarch' 'blackarch-drone' 'blackarch-meta-plug')
+pkgrel=1
+pkgdesc="Scripts from the pentestpi project ported to BlackArch use."
+arch=('armv6h' 'armv7h')
+url='https://github.com/adminempire/pentestpi/'
+source=("blackarch-autoplug::git+https://github.com/adminempire/pentestpi.git")
+md5sums=('SKIP')
+
+package() {
+  cd ${srcdir}/blackarch-autoplug/
+  install -d ${pkgdir}/usr/bin
+  install -Dm744 airbaseAttacks.py ${pkgdir}/usr/bin/airbaseAttacks
+  install -Dm744 blackarch-pyplug.py ${pkgdir}/usr/bin/blackarch-pyplug
+  install -Dm744 connectCrackedAP.py ${pkgdir}/usr/bin/connectCrackedAP
+  install -Dm744 netchecker.py ${pkgdir}/usr/bin/netchecker
+  install -Dm744 optionsReader.py ${pkgdir}/usr/bin/optionsReader
+  install -Dm644 options.conf ${pkgdir}/etc/options.conf
+}
