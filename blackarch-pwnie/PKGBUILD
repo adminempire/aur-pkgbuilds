@@ -4,11 +4,11 @@ groups=('blackarch' 'blackarch-drone' 'blackarch-meta-plug')
 pkgrel=1
 pkgdesc="Scripts from the pwnieexpress project ported to BlackArch use."
 arch=('armv6h' 'armv7h')
-url='https://github.com/adminempire/pwn_pad_sources/'
+url='https://github.com/adminempire/pwnieexpress/'
 license=('creative-commons')
 depends=('aircrack-ng' 'bluelog' 'ettercap' 'macchanger' 'kismet' 'metasploit' 'nmap' 'set'
         'sslstrip' 'tcpdump' 'tshark' 'wifite')
-source=("blackarch-plug::git+https://github.com/adminempire/pwn_pad_sources.git")
+source=("blackarch-plug::git+https://github.com/adminempire/pwnieexpress.git")
 md5sums=('SKIP')
 
 package() {
