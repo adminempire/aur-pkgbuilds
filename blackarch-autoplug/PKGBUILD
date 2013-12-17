@@ -4,8 +4,8 @@ groups=('blackarch' 'blackarch-drone' 'blackarch-meta-plug')
 pkgrel=1
 pkgdesc="Scripts from the pentestpi project ported to BlackArch use."
 arch=('armv6h' 'armv7h')
-url='https://github.com/adminempire/pentestpi/'
-source=("blackarch-autoplug::git+https://github.com/adminempire/pentestpi.git")
+url='https://github.com/adminempire/pentestpi-port/'
+source=("blackarch-autoplug::git+https://github.com/adminempire/pentestpi-port.git")
 md5sums=('SKIP')
 
 package() {
