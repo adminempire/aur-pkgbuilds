@@ -1,6 +1,6 @@
 pkgname=blackarch-pwnie
 pkgver=0.1
-groups=('blackarch' 'blackarch-drone' 'blackarch-meta-plug')
+groups=('blackarch-drone' 'blackarch-plug')
 pkgrel=1
 pkgdesc="Scripts from the pwnieexpress project ported to BlackArch use."
 arch=('armv6h' 'armv7h')
