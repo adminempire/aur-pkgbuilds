@@ -1,36 +1,36 @@
-pkgname=blackarch-pwnie
+pkgname=pwnie
 pkgver=0.1
-groups=('blackarch-drone' 'blackarch-plug')
+groups=('archassault-drone' 'archassault-plug')
 pkgrel=1
-pkgdesc="Scripts from the pwnieexpress project ported to BlackArch use."
+pkgdesc="Scripts from the pwnieexpress project ported."
 arch=('armv6h' 'armv7h')
 url='https://github.com/adminempire/pwnieexpress/'
 license=('creative-commons')
 depends=('aircrack-ng' 'bluelog' 'ettercap' 'macchanger' 'kismet' 'metasploit' 'nmap' 'set'
         'sslstrip' 'tcpdump' 'tshark' 'wifite')
-source=("blackarch-plug::git+https://github.com/adminempire/pwnieexpress.git")
+source=("plug::git+https://github.com/adminempire/pwnieexpress.git")
 md5sums=('SKIP')
 
 package() {
-  cd ${srcdir}/blackarch-plug/scripts
+  cd ${srcdir}/plug/scripts
   install -d ${pkgdir}/usr/bin
-  install -Dm744 airodump.sh ${pkgdir}/usr/bin
-  install -Dm744 bluelog.sh ${pkgdir}/usr/bin
-  install -Dm744 btscan.sh ${pkgdir}/usr/bin
-  install -Dm744 dnsspoof.sh ${pkgdir}/usr/bin
-  install -Dm744 dnsiff.sh ${pkgdir}/usr/bin
-  install -Dm744 ettercap.sh ${pkgdir}/usr/bin
-  install -Dm744 evilap.sh ${pkgdir}/usr/bin
-  install -Dm744 hostmacchanger.sh ${pkgdir}/usr/bin
-  install -Dm744 kismet.sh ${pkgdir}/usr/bin
-  install -Dm744 logwiper.sh ${pkgdir}/usr/bin
-  install -Dm744 msf.sh ${pkgdir}/usr/bin
-  install -Dm744 nmap_scan.sh ${pkgdir}/usr/bin
-  install -Dm744 set.sh ${pkgdir}/usr/bin
-  install -Dm744 sslstrip.sh ${pkgdir}/usr/bin
-  install -Dm744 stringswatch.sh ${pkgdir}/usr/bin
-  install -Dm744 tcpdump.sh ${pkgdir}/usr/bin
-  install -Dm744 tshark.sh ${pkgdir}/usr/bin
-  install -Dm744 ubertooth.sh ${pkgdir}/usr/bin
-  install -Dm744 wifite.sh ${pkgdir}/usr/bin
+  install -Dm755 airodump.sh ${pkgdir}/usr/bin/pwnie-airodump
+  install -Dm755 bluelog.sh ${pkgdir}/usr/bin/pwnie/bluelog
+  install -Dm755 btscan.sh ${pkgdir}/usr/bin/pwnie-btscan
+  install -Dm755 dnsspoof.sh ${pkgdir}/usr/bin/pwnie-dnsspoof
+  install -Dm755 dnsiff.sh ${pkgdir}/usr/bin/pwnie-dnsiff
+  install -Dm755 ettercap.sh ${pkgdir}/usr/bin/pwnie-ettercap
+  install -Dm755 evilap.sh ${pkgdir}/usr/bin/pwnie-evilap
+  install -Dm755 hostmacchanger.sh ${pkgdir}/usr/bin/pwnie-macchanger
+  install -Dm755 kismet.sh ${pkgdir}/usr/bin/pwnie-kismet
+  install -Dm755 logwiper.sh ${pkgdir}/usr/bin/pwnie-logwiper
+  install -Dm755 msf.sh ${pkgdir}/usr/bin/pwnie-msf
+  install -Dm755 nmap_scan.sh ${pkgdir}/usr/bin/pwnie-nmap
+  install -Dm755 set.sh ${pkgdir}/usr/bin/pwnie-set
+  install -Dm755 sslstrip.sh ${pkgdir}/usr/bin/pwnie-sslstrip
+  install -Dm755 stringswatch.sh ${pkgdir}/usr/bin/pwnie-stringswatch
+  install -Dm755 tcpdump.sh ${pkgdir}/usr/bin/pwnie-tcpdump
+  install -Dm755 tshark.sh ${pkgdir}/usr/bin/pwnie-tshark
+  install -Dm755 ubertooth.sh ${pkgdir}/usr/bin/pwnie-ubertooth
+  install -Dm755 wifite.sh ${pkgdir}/usr/bin/pwnie-wifite
 }
