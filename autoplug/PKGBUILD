@@ -9,12 +9,12 @@ source=("autoplug::git+https://github.com/adminempire/pentestpi-port.git")
 md5sums=('SKIP')
 
 package() {
-  cd ${srcdir}/autoplug/
-  install -d ${pkgdir}/usr/bin
-  install -Dm755 airbaseAttacks.py ${pkgdir}/usr/bin/airbaseAttacks
-  install -Dm755 blackarch-pyplug.py ${pkgdir}/usr/bin/blackarch-pyplug
-  install -Dm755 connectCrackedAP.py ${pkgdir}/usr/bin/connectCrackedAP
-  install -Dm755 netchecker.py ${pkgdir}/usr/bin/netchecker
-  install -Dm755 optionsReader.py ${pkgdir}/usr/bin/optionsReader
-  install -Dm644 options.conf ${pkgdir}/etc/options.conf
+  cd "${srcdir}/autoplug/"
+  install -d "${pkgdir}"/usr/bin
+  install -Dm755 airbaseAttacks.py "${pkgdir}"/usr/bin/airbaseAttacks
+  install -Dm755 blackarch-pyplug.py "${pkgdir}"/usr/bin/blackarch-pyplug
+  install -Dm755 connectCrackedAP.py "${pkgdir}"/usr/bin/connectCrackedAP
+  install -Dm755 netchecker.py "${pkgdir}"/usr/bin/netchecker
+  install -Dm755 optionsReader.py "${pkgdir}"/usr/bin/optionsReader
+  install -Dm644 options.conf "${pkgdir}"/etc/options.conf
 }
