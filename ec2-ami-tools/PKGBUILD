@@ -11,7 +11,7 @@
 
 pkgname=ec2-ami-tools
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="The Amazon EC2 AMI Tools are command-line utilities to help manage machine instances for Amazon S3."
 arch=('any')
 url="http://developer.amazonwebservices.com/"
