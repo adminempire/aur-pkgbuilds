@@ -10,8 +10,8 @@
 ### the software) then please do email me or post an AUR comment.
 
 pkgname=ec2-ami-tools
-pkgver=1.4.0.9
-pkgrel=3
+pkgver=1.5.1
+pkgrel=1
 pkgdesc="The Amazon EC2 AMI Tools are command-line utilities to help manage machine instances for Amazon S3."
 arch=('any')
 url="http://developer.amazonwebservices.com/"
