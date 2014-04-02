@@ -39,7 +39,7 @@ depends=("perl-cairo-gobject"
         "perl-xml-parser"
 	"perl-gtk2-unique")
 optdepends=('tightvnc' 'rdesktop' 'openssh' 'perl-gtk2-appindicator')
-md5sums=('40373df32d83ea5fdd943aeaab7b4227')
+md5sums=('19799f77eca57b2525b26dd636671f07')
 
 build() {
   # some patching needed
