@@ -10,8 +10,8 @@
 ### the software) then please do email me or post an AUR comment.
 
 pkgname=pacmanager
-pkgver=4.5.3.5
-pkgrel=1
+pkgver=4.5.3.7
+pkgrel=2
 pkgdesc="Perl/GTK Gnome replacement for SecureCRT/Putty"
 arch=('i686' 'x86_64')
 url="http://sites.google.com/site/davidtv/"
@@ -36,9 +36,10 @@ depends=("perl-cairo-gobject"
         "perl-gnome2-vte"
         "perl-gtk2-sourceview2"
         "perl-crypt-rijndael"
-        "perl-xml-parser")
+        "perl-xml-parser"
+	"perl-gtk2-unique")
 optdepends=('tightvnc' 'rdesktop' 'openssh' 'perl-gtk2-appindicator')
-md5sums=('7d86fb8171c6bb24b5e2ffc9e3da335f')
+md5sums=('40373df32d83ea5fdd943aeaab7b4227')
 
 build() {
   # some patching needed
